@@ -4,7 +4,8 @@ Launch a Kubernetes cluster with EC2 instances using Terraform <br>
 1. AWS CLI - Please follow this [link](https://aws.amazon.com/cli/) for installation and information about AWS CLI
 1. AWS account with access key to your EC2 - You can use an existing account or create a new one with AWS IAM console then go to manage access key and generate 
 a new key. This account must have IAM role which have minimum policy to create instances in EC2. Please follow this [link](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) for information how to create IAM role and generate a key pair. <br> 
-1. Terraform - Please follow this [link](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started) for how to install Terraform
+1. Terraform - Please follow this [link](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started) for how to install Terraform <br>
+
 **How to use**
 1. Configure AWS credential: 
    - Invoke credential configuration with AWS CLI and follow on screen instruction enter aws_access_key_id, aws_secret_access_key, region, output (json) <br>
