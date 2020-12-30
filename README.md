@@ -28,7 +28,7 @@ a new key. This account must have IAM role which have minimum policy to create i
    ```
    - To deploy: 
    ```
-   terraform deploy
+   terraform apply
    ```
    You must enter "yes" for confirmation then we should see the result: <br>
    ```
