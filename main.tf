@@ -49,7 +49,7 @@ resource "aws_instance" "Master-Node" {
   curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
   apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
   apt update -y
-  apt install -y kubelet kubeadm kubectl
+  apt install -y kubelet=1.19.3-00 kubeadm=1.19.3-00 kubectl=1.19.3-00
   sysctl -w net.ipv4.ip_forward=1
   sed -i 's/net.ipv4.ip_forward=0/net.ipv4.ip_forward=1/Ig' /etc/sysctl.conf
   # Ignore preflight in order to have master running on t2.micro, otherwise remove it 
@@ -93,7 +93,7 @@ resource "aws_instance" "Agent-Node" {
   curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
   apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
   apt update -y
-  apt install -y kubelet kubeadm kubectl
+  apt install -y kubelet=1.19.3-00 kubeadm=1.19.3-00 kubectl=1.19.3-00
   sysctl -w net.ipv4.ip_forward=1
   sed -i 's/net.ipv4.ip_forward=0/net.ipv4.ip_forward=1/Ig' /etc/sysctl.conf
   kubeadm join ${aws_instance.Master-Node.private_ip}:6443 \
